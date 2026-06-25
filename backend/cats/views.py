@@ -7,7 +7,7 @@ from .serializers import AchievementSerializer, CatSerializer
 
 
 class CatViewSet(viewsets.ModelViewSet):
-    queryset = Cat.objects.all()
+    queryset = Cat.objects.order_by('id')
     serializer_class = CatSerializer
     pagination_class = PageNumberPagination 
 
