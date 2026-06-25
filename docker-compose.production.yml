@@ -21,9 +21,8 @@ services:
 
   frontend:
     image: ${DOCKERHUB_USERNAME}/kittygram_frontend
-    command: sh -c "rm -rf /static/* && cp -r /app/build/. /static/"
     volumes:
-      - static:/static
+      - static:/app/build
     restart: always
 
   gateway:
